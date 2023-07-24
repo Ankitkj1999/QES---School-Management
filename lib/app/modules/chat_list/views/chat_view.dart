@@ -11,13 +11,24 @@ class ChatView extends GetView<ChatController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        // bottomNavigationBar: messageBox,
+        // bottomNavigationBar: Container(
+        //   color: Colors.transparent,
+        //   height: getMediaSize(65),
+        //   child: messageBox,
+        // ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: Container(
+          child: messageBox,
+          height: getMediaSize(45),
+          width: getMediaSize(350),
+          // color: Colors.red,
+        ),
         appBar: PreferredSize(
             child: topView, preferredSize: Size.fromHeight(getMediaSize(100))),
         body: SingleChildScrollView(
           child: Container(
             // height: Get.height,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 repeat: ImageRepeat.repeat,
                 image: AssetImage(AppImages.beans_bg),
@@ -172,24 +183,24 @@ class ChatView extends GetView<ChatController> {
                 );
               },
             ),
-            messageBox
+            // messageBox
           ],
         ),
       );
 
-  Widget get messageBox => Align(
-        alignment: Alignment.bottomLeft,
-        child: Container(
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(5),
-          // padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
-          height: getMediaSize(40),
-          width: Get.width,
-          decoration: BoxDecoration(
-            color: Colors.black12,
-            borderRadius: BorderRadius.circular(20),
-          ),
+  Widget get messageBox => Container(
+        // margin: EdgeInsets.all(10),
+        padding: EdgeInsets.all(5),
+        // padding: EdgeInsets.only(left: 10, bottom: 10, top: 10),
+        height: getMediaSize(40),
+        width: Get.width,
+        decoration: BoxDecoration(
+          color: Colors.black12,
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               SizedBox(
@@ -209,12 +220,25 @@ class ChatView extends GetView<ChatController> {
                 width: getMediaSize(15),
               ),
               GestureDetector(
-                onTap: () {},
-                child: Image(image: AssetImage(AppIcons.file_icon)),
+                  onTap: () {},
+                  child: Image(
+                    image: AssetImage(
+                      AppIcons.file_icon,
+                    ),
+                    height: getMediaSize(25),
+                  )),
+              SizedBox(
+                width: getMediaSize(15),
               ),
               GestureDetector(
                 onTap: () {},
-                child: Image(image: AssetImage(AppIcons.send_icon)),
+                child: Image(
+                  image: AssetImage(AppIcons.send_icon),
+                  height: getMediaSize(25),
+                ),
+              ),
+              SizedBox(
+                width: getMediaSize(15),
               ),
             ],
           ),
