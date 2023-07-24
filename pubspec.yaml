@@ -1,0 +1,95 @@
+name: ces
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment: 
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies: 
+  cupertino_icons: ^1.0.2
+  get: 4.6.5
+  flutter: 
+    sdk: flutter
+  carousel_slider: ^4.2.1
+  getwidget: ^3.1.1
+  flutter_calendar_carousel: ^2.4.2
+
+
+dev_dependencies: 
+  flutter_lints: ^2.0.0
+  flutter_test: 
+    sdk: flutter
+
+flutter: 
+  uses-material-design: true
+
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  fonts:
+    - family: DM_Sans
+      fonts:
+        - asset: assets/fonts/DM_Sans/DMSans-Bold.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-BoldItalic.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-Italic.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-MediumItalic.ttf
+        - asset: assets/fonts/DM_Sans/DMSans-Regular.ttf
+
+    - family: Lato
+      fonts:
+        - asset: assets/fonts/Lato/Lato-Black.ttf
+        - asset: assets/fonts/Lato/Lato-Bold.ttf
+        - asset: assets/fonts/Lato/Lato-Light.ttf
+        - asset: assets/fonts/Lato/Lato-Regular.ttf
+        - asset: assets/fonts/Lato/Lato-Thin.ttf
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins/Poppins-Bold.ttf
+        - asset: assets/fonts/Poppins/Poppins-Black.ttf
+        - asset: assets/fonts/Poppins/Poppins-ExtraBold.ttf
+        - asset: assets/fonts/Poppins/Poppins-ExtraLight.ttf
+        - asset: assets/fonts/Poppins/Poppins-Light.ttf
+        - asset: assets/fonts/Poppins/Poppins-Medium.ttf
+        - asset: assets/fonts/Poppins/Poppins-SemiBold.ttf
+        - asset: assets/fonts/Poppins/Poppins-Thin.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto/Roboto-Thin.ttf
+        - asset: assets/fonts/Roboto/Roboto-Black.ttf
+        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+
+
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/Open_Sans /OpenSans-SemiBold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_Condensed-ExtraBold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans-Medium.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_SemiCondensed-SemiBold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_Condensed-Medium.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans-ExtraBold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans-Regular.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_SemiCondensed-Medium.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_SemiCondensed-Regular.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_Condensed-Light.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_SemiCondensed-Bold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_Condensed-SemiBold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_Condensed-Bold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_SemiCondensed-ExtraBold.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_SemiCondensed-Light.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans-Light.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans_Condensed-Regular.ttf
+        - asset: assets/fonts/Open_Sans /OpenSans-Bold.ttf
+
+
+
+
+
+
+
