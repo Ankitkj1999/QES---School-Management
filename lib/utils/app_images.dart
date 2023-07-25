@@ -2,6 +2,10 @@ class AppImages {
   ///***   Template ***///
   ///  static const String image_name = 'assets/images/splash_1.png';
   ///
+  static const String board_1 = 'assets/images/onboarding-1.png';
+
+  static const String board_2 = 'assets/images/onboarding-2.png';
+  static const String board_3 = 'assets/images/onboarding-3.png';
   static const String splash_1 = 'assets/images/splash_1.png';
   static const String splash_2 = 'assets/images/splash_2.png';
   static const String splash_3 = 'assets/images/splash_3.png';
@@ -33,7 +37,15 @@ class AppIcons {
   ///***   Template ***///
   ///    static const String splashIcon_1 = 'assets/icons/splash_icon_1.png';
   ///
+  static const String studentIcon = 'assets/icons/student_icon.png';
+  static const String parentsIcon = 'assets/icons/parents_icon.png';
+  static const String teacherIcon = 'assets/icons/teacher_icon.png';
+  static const String schoolIcons = 'assets/icons/school_icon.png';
+  static const String loginCap = 'assets/icons/login_cap.png';
+
   static const String splashIcon_1 = 'assets/icons/splash_icon_1.png';
+  static const String boardButton1 = 'assets/icons/onboarding_icon_1.png';
+  static const String boardButton2 = 'assets/icons/onboarding_icon_2.png';
   static const String splashIcon_2 = 'assets/icons/splash_icon_2.png';
   static const String googleIcon = 'assets/icons/facebook_auth.png';
   static const String facebookIcon = 'assets/icons/google_auth.png';

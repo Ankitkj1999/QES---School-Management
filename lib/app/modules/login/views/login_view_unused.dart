@@ -46,19 +46,24 @@ class LoginView extends GetView<LoginController> {
             ),
             Container(
               width: Get.width * 0.296,
-              child: Image.asset(AppIcons.loginCap),
+              child: Image.asset(AppImages.login_logo),
             ),
             SizedBox(
-              height: getMediaSize(25),
+              height: Get.height * 0.005,
             ),
             Container(
               // color: Colors.grey,
               width: Get.width * 0.35,
-              child: Text("Select type",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w900,
-                  )),
+              child: const Text(
+                AppStrings.institute_name,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 10.73,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
             ),
           ],
         ),
@@ -276,6 +281,42 @@ class LoginView extends GetView<LoginController> {
                                       ),
                                     ],
                                   ),
+                                ),
+                                SizedBox(
+                                  height: Get.width * 0.05,
+                                ),
+
+                                // social signups
+                                Text(
+                                  'OR SIGN IN WITH',
+                                  style: TextStyle(
+                                    color: Color(0xFF2D4379),
+                                    fontSize: Get.height * 0.01477,
+                                    fontFamily: 'Poppins',
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 1.75,
+                                  ),
+                                ),
+                                SizedBox(
+                                  height: Get.width * 0.05,
+                                ),
+                                // social icons
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Image.asset(
+                                      AppIcons.facebookIcon,
+                                      height: Get.height * 0.0554,
+                                    ),
+                                    SizedBox(width: 10),
+                                    Image.asset(
+                                      AppIcons.googleIcon,
+                                      height: Get.height * 0.0554,
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: Get.width * 0.05,
                                 ),
                               ],
                             ),

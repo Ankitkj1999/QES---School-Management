@@ -39,7 +39,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
     GetPage(
@@ -75,19 +75,19 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SIGNUP,
-      page: () => SignupView(),
+      page: () => const SignupView(),
       binding: SignupBinding(),
       transition: Transition.rightToLeftWithFade,
     ),
     GetPage(
       name: _Paths.PENDING,
-      page: () => PendingView(),
+      page: () => const PendingView(),
       binding: SignupBinding(),
       transition: Transition.rightToLeftWithFade,
     ),
     GetPage(
       name: _Paths.PROFILE,
-      page: () => ProfileView(),
+      page: () => const ProfileView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
@@ -101,14 +101,14 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SUPPORT,
-      page: () => SupportView(),
+      page: () => const SupportView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.NOTIFICATION,
-      page: () => NotificationView(),
+      page: () => const NotificationView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
@@ -122,91 +122,91 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.SELECTCLASS,
-      page: () => SelectClassView(),
+      page: () => const SelectClassView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.ASSIGNMENTS,
-      page: () => AssignmentsView(),
+      page: () => const AssignmentsView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.SYLLABUS,
-      page: () => SyllabusView(),
+      page: () => const SyllabusView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.EXAMLIST,
-      page: () => ExamListView(),
+      page: () => const ExamListView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.SUBJECT,
-      page: () => SubjectView(),
+      page: () => const SubjectView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.CHAPTER,
-      page: () => ChaptersView(),
+      page: () => const ChaptersView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.FILES,
-      page: () => FilesView(),
+      page: () => const FilesView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.TIMETABLE,
-      page: () => TimetableView(),
+      page: () => const TimetableView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.ATTENDENCE,
-      page: () => AttendenceView(),
+      page: () => const AttendenceView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
       name: _Paths.LIVECLASS,
-      page: () => LiveClassView(),
+      page: () => const LiveClassView(),
       binding: HomeBinding(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
     GetPage(
         name: _Paths.FEEDETAILS,
-        page: () => FeeDetailsView(),
+        page: () => const FeeDetailsView(),
         binding: HomeBinding(),
         transition: Transition.rightToLeftWithFade,
         transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
         name: _Paths.EVENTS,
-        page: () => EventsView(),
+        page: () => const EventsView(),
         binding: HomeBinding(),
         transition: Transition.rightToLeftWithFade,
         transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
         name: _Paths.ASK_DOUBT,
-        page: () => AskDoubtView(),
+        page: () => const AskDoubtView(),
         transition: Transition.rightToLeftWithFade,
-        transitionDuration: Duration(milliseconds: 500)),
+        transitionDuration: const Duration(milliseconds: 500)),
     GetPage(
       name: _Paths.CHAT_LIST,
       page: () => const ChatListView(),
