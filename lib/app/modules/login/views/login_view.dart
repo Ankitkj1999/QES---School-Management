@@ -1,6 +1,7 @@
 import 'package:ces/utils/app_images.dart';
 import 'package:ces/utils/strings.dart';
 import 'package:ces/utils/styles.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -23,7 +24,7 @@ class LoginView extends GetView<LoginController> {
             width: Get.width,
             color: Color(0XFFFFD4d4),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 topView,
                 SizedBox(
@@ -72,10 +73,10 @@ class LoginView extends GetView<LoginController> {
 
   Widget get profileRow {
     var sizedBox1 = SizedBox(
-      width: getMediaSize(13),
+      width: getMediaSize(10),
     );
     return Container(
-      height: getMediaSize(100),
+      height: getMediaSize(101),
       width: Get.width,
       padding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
       child: Row(
@@ -83,31 +84,83 @@ class LoginView extends GetView<LoginController> {
         children: [
           Column(
             children: [
-              ProfileButton(
-                iconName: AppIcons
-                    .studentIcon, // Replace this with the actual asset path
-                txt: 'Student',
-              ),
+              Obx(() {
+                return ProfileButton(
+                  onPressed: () {
+                    controller.onToggleSelectedStudent(
+                        !controller.selectedStudent.value);
+
+                    controller.selectedParent.value = false;
+                    controller.selectedTeacher.value = false;
+                    controller.selectedSchool.value = false;
+                  },
+                  borderColor: controller.selectedStudent.value
+                      ? Colors.red
+                      : Colors.green,
+                  iconName: AppIcons
+                      .studentIcon, // Replace this with the actual asset path
+                  txt: 'Student',
+                );
+              }),
             ],
           ),
           sizedBox1,
-          ProfileButton(
-            iconName:
-                AppIcons.teacherIcon, // Replace this with the actual asset path
-            txt: 'Teacher',
-          ),
+          Obx(() {
+            return ProfileButton(
+              onPressed: () {
+                controller.selectedStudent.value = false;
+                controller
+                    .onToggleSelectedTeacher(!controller.selectedTeacher.value);
+
+                controller.selectedParent.value = false;
+                controller.selectedSchool.value = false;
+              },
+              borderColor:
+                  controller.selectedTeacher.value ? Colors.red : Colors.green,
+
+              iconName: AppIcons
+                  .teacherIcon, // Replace this with the actual asset path
+              txt: 'Teacher',
+            );
+          }),
           sizedBox1,
-          ProfileButton(
-            iconName:
-                AppIcons.parentsIcon, // Replace this with the actual asset path
-            txt: 'Parents',
-          ),
+          Obx(() {
+            return ProfileButton(
+              onPressed: () {
+                controller.selectedStudent.value = false;
+                controller.selectedTeacher.value = false;
+                controller
+                    .onToggleSelectedParent(!controller.selectedParent.value);
+                controller.selectedSchool.value = false;
+              },
+              borderColor:
+                  controller.selectedParent.value ? Colors.red : Colors.green,
+
+              iconName: AppIcons
+                  .parentsIcon, // Replace this with the actual asset path
+              txt: 'Parents',
+            );
+          }),
           sizedBox1,
-          ProfileButton(
-            iconName:
-                AppIcons.schoolIcons, // Replace this with the actual asset path
-            txt: 'School',
-          ),
+          Obx(() {
+            return ProfileButton(
+              onPressed: () {
+                print(controller.selectedSchool.value);
+                controller.selectedStudent.value = false;
+                controller.selectedParent.value = false;
+                controller.selectedTeacher.value = false;
+                controller
+                    .onToggleSelectedSchool(!controller.selectedSchool.value);
+              },
+              borderColor: controller.selectedSchool.value == true
+                  ? Colors.red
+                  : Colors.green,
+
+              iconName: AppIcons
+                  .schoolIcons, // Replace this with the actual asset path
+              txt: 'School',
+            );
+          }),
           sizedBox1,
         ],
       ),
@@ -328,9 +381,14 @@ class ProfileButton extends StatelessWidget {
   final String iconName;
   final String txt;
   final VoidCallback? onPressed;
+  final Color borderColor;
 
   const ProfileButton(
-      {required this.iconName, required this.txt, Key? key, this.onPressed})
+      {required this.iconName,
+      required this.txt,
+      Key? key,
+      this.onPressed,
+      required this.borderColor})
       : super(key: key);
 
   @override
@@ -338,20 +396,24 @@ class ProfileButton extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: onPressed,
-          child: Container(
-            height: getMediaSize(74),
-            width: getMediaSize(getMediaSize(74)),
-            child: Image.asset(iconName), // Use iconName as the asset path
-          ),
-        ),
+            onTap: onPressed,
+            child: Container(
+              padding: EdgeInsets.all(3),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(60), color: borderColor),
+              child: Container(
+                height: getMediaSize(68),
+                width: getMediaSize(getMediaSize(68)),
+                child: Image.asset(iconName), // Use iconName as the asset path
+              ),
+            )),
         SizedBox(
           height: getMediaSize(5),
         ),
         Text(
           txt, // Use txt as the label for the button
           style: TextStyle(
-            fontSize: 15,
+            fontSize: getMediaSize(15),
             fontWeight: FontWeight.w900,
           ),
         )

@@ -1,3 +1,6 @@
+import 'dart:ffi';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +11,28 @@ class LoginController extends GetxController {
   final loginFormKey = GlobalKey<FormState>();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+
+  RxBool selectedStudent = false.obs;
+  RxBool selectedParent = false.obs;
+  RxBool selectedTeacher = false.obs;
+  RxBool selectedSchool = false.obs;
+
+  void onToggleSelectedStudent(bool newSelectedValue) {
+    selectedStudent.value = newSelectedValue;
+  }
+
+  void onToggleSelectedTeacher(bool newSelectedValue) {
+    selectedTeacher.value = newSelectedValue;
+  }
+
+  void onToggleSelectedParent(bool newSelectedValue) {
+    selectedParent.value = newSelectedValue;
+  }
+
+  void onToggleSelectedSchool(bool newSelectedValue) {
+    selectedSchool.value = newSelectedValue;
+  }
+
   @override
   void onInit() {
     super.onInit();
