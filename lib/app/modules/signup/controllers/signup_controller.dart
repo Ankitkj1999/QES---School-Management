@@ -1,8 +1,11 @@
+import 'package:ces/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class SignupController extends GetxController {
   //TODO: Implement SignupController
+
+  final LoginController loginController = Get.find();
 
   final count = 0.obs;
   final signupFormKey = GlobalKey<FormState>();

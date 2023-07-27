@@ -177,8 +177,7 @@ class LoginView extends GetView<LoginController> {
               onTap: () {
                 if (controller.loginFormKey.currentState!.validate()) {
                   FocusScope.of(context).unfocus();
-                  Get.snackbar('Login', 'Successful',
-                      snackPosition: SnackPosition.BOTTOM);
+
                   controller.login();
                 }
               },

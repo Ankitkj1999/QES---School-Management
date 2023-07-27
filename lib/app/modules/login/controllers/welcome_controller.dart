@@ -1,3 +1,4 @@
+import 'package:ces/app/modules/login/controllers/login_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,6 +8,7 @@ class WelcomeController extends GetxController {
   final count = 0.obs;
   final formKey = GlobalKey<FormState>();
   final TextEditingController codeController = TextEditingController();
+  // final LoginController loginController = Get.find();
 
   @override
   void onInit() {

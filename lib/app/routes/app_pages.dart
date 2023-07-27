@@ -31,6 +31,7 @@ import '../modules/login/views/welcome_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/pending_view.dart';
 import '../modules/signup/views/signup_view.dart';
+import '../modules/signup/views/signup_admin_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
@@ -76,6 +77,12 @@ class AppPages {
     GetPage(
       name: _Paths.SIGNUP,
       page: () => const SignupView(),
+      binding: SignupBinding(),
+      transition: Transition.rightToLeftWithFade,
+    ),
+    GetPage(
+      name: _Paths.SIGNUP_ADMIN,
+      page: () => const SignupAdminView(),
       binding: SignupBinding(),
       transition: Transition.rightToLeftWithFade,
     ),

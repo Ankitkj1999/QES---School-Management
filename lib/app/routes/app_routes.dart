@@ -9,6 +9,7 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const WELCOME = _Paths.WELCOME;
   static const SIGNUP = _Paths.SIGNUP;
+  static const SIGNUP_ADMIN = _Paths.SIGNUP_ADMIN;
   static const PENDING = _Paths.PENDING;
   static const PROFILE = _Paths.PROFILE;
   static const CHANGEPASSWORD = _Paths.CHANGEPASSWORD;
@@ -40,6 +41,7 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const WELCOME = '/welcome';
   static const SIGNUP = '/signup';
+  static const SIGNUP_ADMIN = '/signup_admin';
   static const PENDING = '/pending';
   static const PROFILE = '/profile';
   static const CHANGEPASSWORD = '/changePassword';
@@ -52,10 +54,10 @@ abstract class _Paths {
   static const EXAMLIST = '/exam_list';
   static const SUBJECT = '/subject';
   static const CHAPTER = '/chapter';
+  static const LIVECLASS = '/live_class';
   static const FILES = '/files';
   static const TIMETABLE = '/timetable';
   static const ATTENDENCE = '/attendence';
-  static const LIVECLASS = '/live_class';
   static const FEEDETAILS = '/fee_details';
   static const EVENTS = '/events';
   static const ASK_DOUBT = '/ask_doubt';
