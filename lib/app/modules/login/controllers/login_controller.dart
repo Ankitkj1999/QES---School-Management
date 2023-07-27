@@ -54,8 +54,23 @@ class LoginController extends GetxController {
 
   void login() {
     // TODO: Perform login logic here
-    Get.toNamed('/welcome');
-    // Get.to(() => ());
+    if (selectedStudent.value == true) {
+      Get.toNamed('/welcome');
+    } else if (selectedParent.value == true) {
+      Get.toNamed('/home');
+    } else if (selectedTeacher.value == true) {
+      Get.toNamed('/teacher');
+    } else if (selectedSchool.value == true) {
+      Get.toNamed('/school');
+    } else {
+      Get.snackbar('Please select a user profiel!', '',
+          snackPosition: SnackPosition.BOTTOM,
+          backgroundColor: Colors.red,
+          colorText: Colors.white,
+          duration: Duration(seconds: 3));
+      Get.toNamed('/welcome');
+    }
+    // Get.toNamed('/welcome');
     emailController.clear();
     passwordController.clear();
   }

@@ -24,7 +24,7 @@ class LoginView extends GetView<LoginController> {
             width: Get.width,
             color: Color(0XFFFFD4d4),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 topView,
                 SizedBox(
@@ -95,8 +95,8 @@ class LoginView extends GetView<LoginController> {
                     controller.selectedSchool.value = false;
                   },
                   borderColor: controller.selectedStudent.value
-                      ? Colors.red
-                      : Colors.green,
+                      ? Color(0xff473f97)
+                      : Colors.transparent,
                   iconName: AppIcons
                       .studentIcon, // Replace this with the actual asset path
                   txt: 'Student',
@@ -115,8 +115,9 @@ class LoginView extends GetView<LoginController> {
                 controller.selectedParent.value = false;
                 controller.selectedSchool.value = false;
               },
-              borderColor:
-                  controller.selectedTeacher.value ? Colors.red : Colors.green,
+              borderColor: controller.selectedTeacher.value
+                  ? Color(0xff473f97)
+                  : Colors.transparent,
 
               iconName: AppIcons
                   .teacherIcon, // Replace this with the actual asset path
@@ -133,8 +134,9 @@ class LoginView extends GetView<LoginController> {
                     .onToggleSelectedParent(!controller.selectedParent.value);
                 controller.selectedSchool.value = false;
               },
-              borderColor:
-                  controller.selectedParent.value ? Colors.red : Colors.green,
+              borderColor: controller.selectedParent.value
+                  ? Color(0xff473f97)
+                  : Colors.transparent,
 
               iconName: AppIcons
                   .parentsIcon, // Replace this with the actual asset path
@@ -153,8 +155,8 @@ class LoginView extends GetView<LoginController> {
                     .onToggleSelectedSchool(!controller.selectedSchool.value);
               },
               borderColor: controller.selectedSchool.value == true
-                  ? Colors.red
-                  : Colors.green,
+                  ? Color(0xff473f97)
+                  : Colors.transparent,
 
               iconName: AppIcons
                   .schoolIcons, // Replace this with the actual asset path
@@ -398,12 +400,14 @@ class ProfileButton extends StatelessWidget {
         GestureDetector(
             onTap: onPressed,
             child: Container(
-              padding: EdgeInsets.all(3),
+              // padding: EdgeInsets.all(2),
+
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(60), color: borderColor),
               child: Container(
+                margin: EdgeInsets.all(2),
                 height: getMediaSize(68),
-                width: getMediaSize(getMediaSize(68)),
+                width: getMediaSize(68),
                 child: Image.asset(iconName), // Use iconName as the asset path
               ),
             )),
