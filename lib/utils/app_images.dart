@@ -101,5 +101,9 @@ class AppIcons {
   static const String admin_homework = 'assets/icons/admin_homework.png';
   static const String admin_result = 'assets/icons/admin_result.png';
   static const String admin_solution = 'assets/icons/admin_solution.png';
+  static const String admin_pop = 'assets/icons/profile_of_publication.png';
   static const String admin_account = 'assets/icons/admin.png';
+  static const String admin_emg_cont = 'assets/icons/emergency_contact.png';
+  static const String admin_setting = 'assets/icons/admin_settings.png';
+  static const String admin_logout = 'assets/icons/admin_logout.png';
 }

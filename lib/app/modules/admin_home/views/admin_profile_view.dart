@@ -12,6 +12,7 @@ class AdminProfileView extends GetView<ProfileController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: customDrawer,
         // appBar: PreferredSize(
         //     child: customAppBar,
         //     preferredSize: Size.fromHeight(getMediaSize(150))),
@@ -20,6 +21,7 @@ class AdminProfileView extends GetView<ProfileController> {
             children: [
               // appbar
               customAppBar,
+
               // detail view
               adminDetailView,
               // edit button
@@ -31,6 +33,155 @@ class AdminProfileView extends GetView<ProfileController> {
     );
   }
 
+  Widget get customDrawer => Drawer(
+      backgroundColor: Color(0xff473f97),
+      child: ListView(
+        // Important: Remove any padding from the ListView.
+        padding: EdgeInsets.zero,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Color(0XFF615b97),
+            ),
+            padding: EdgeInsets.symmetric(
+                horizontal: getMediaSize(12), vertical: getMediaSize(12)),
+            child: Container(
+              height: getMediaSize(75),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                // mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Container(
+                    width: getMediaSize(51),
+                    height: getMediaSize(51),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      image: DecorationImage(
+                        image: AssetImage(AppImages.man_profile),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: getMediaSize(10),
+                  ),
+                  Container(
+                    // color: Colors.red,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Prajesh Shakya',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                            fontFamily: 'Open Sans',
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          // home
+          ListTile(
+            leading: Image.asset(
+              AppIcons.admin_pop,
+              height: Get.width * 0.066,
+            ),
+            title: const Text(
+              'Profile Of Publication ',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                letterSpacing: -0.30,
+              ),
+            ),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+            },
+          ),
+          SizedBox(
+            height: Get.width * getSize(10),
+          ),
+          // profile
+          ListTile(
+            leading: Image.asset(
+              AppIcons.admin_emg_cont,
+              height: Get.width * 0.066,
+            ),
+            title: const Text(
+              'Emergency Contact',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                letterSpacing: -0.30,
+              ),
+            ),
+            onTap: () {
+              // Update the state of the app.
+              Get.toNamed('/profile');
+            },
+          ),
+          SizedBox(
+            height: Get.width * getSize(10),
+          ),
+          // attendence
+          ListTile(
+            leading: Image.asset(
+              AppIcons.admin_setting,
+              height: Get.width * 0.066,
+            ),
+            title: const Text(
+              'Settings',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                letterSpacing: -0.30,
+              ),
+            ),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+            },
+          ),
+          SizedBox(
+            height: Get.width * getSize(10),
+          ),
+          // about us
+          ListTile(
+            leading: Image.asset(
+              AppIcons.admin_logout,
+              height: Get.width * 0.066,
+            ),
+            title: const Text(
+              'Logout',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 14,
+                fontFamily: 'Poppins',
+                fontWeight: FontWeight.w400,
+                letterSpacing: -0.30,
+              ),
+            ),
+            onTap: () {
+              // Update the state of the app.
+              // ...
+            },
+          ),
+        ],
+      ));
   // App Bar
   Widget get customAppBar => Stack(
         children: [
@@ -54,21 +205,28 @@ class AdminProfileView extends GetView<ProfileController> {
           Positioned(
               top: getMediaSize(100),
               left: getMediaSize(120),
-              child: Container(
-                decoration: BoxDecoration(
-                    color: Color(0xff473f9f),
-                    borderRadius: BorderRadius.all(Radius.circular(100))),
-                height: getMediaSize(140),
-                width: getMediaSize(140),
-                padding: EdgeInsets.all(5),
-                child: Container(
-                  height: getMediaSize(135),
-                  width: getMediaSize(135),
-                  decoration: BoxDecoration(
-                      image: DecorationImage(
-                          image: AssetImage(AppImages.man_profile))),
-                ),
-              ))
+              child: Builder(builder: (context) {
+                return GestureDetector(
+                  onTap: () {
+                    Scaffold.of(context).openDrawer();
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                        color: Color(0xff473f9f),
+                        borderRadius: BorderRadius.all(Radius.circular(100))),
+                    height: getMediaSize(140),
+                    width: getMediaSize(140),
+                    padding: EdgeInsets.all(5),
+                    child: Container(
+                      height: getMediaSize(135),
+                      width: getMediaSize(135),
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              image: AssetImage(AppImages.man_profile))),
+                    ),
+                  ),
+                );
+              }))
         ],
       );
 
