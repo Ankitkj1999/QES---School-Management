@@ -1,10 +1,13 @@
-import 'package:ces/app/modules/home/views/ask_doubt_view.dart';
+import 'package:ces/app/modules/admin_home/views/admin_profile_view.dart';
 import 'package:get/get.dart';
 
+import '../modules/admin_home/bindings/admin_home_binding.dart';
+import '../modules/admin_home/views/admin_home_view.dart';
 import '../modules/chat_list/bindings/chat_list_binding.dart';
 import '../modules/chat_list/views/chat_list_view.dart';
 import '../modules/chat_list/views/chat_view.dart';
 import '../modules/home/bindings/home_binding.dart';
+import '../modules/home/views/ask_doubt_view.dart';
 import '../modules/home/views/assignments_view.dart';
 import '../modules/home/views/attendence_view.dart';
 import '../modules/home/views/change_password_view.dart';
@@ -31,7 +34,6 @@ import '../modules/login/views/welcome_view.dart';
 import '../modules/signup/bindings/signup_binding.dart';
 import '../modules/signup/views/pending_view.dart';
 import '../modules/signup/views/signup_view.dart';
-import '../modules/signup/views/signup_admin_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
@@ -40,7 +42,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH;
+  static const INITIAL = Routes.ADMIN_HOME;
 
   static final routes = [
     GetPage(
@@ -77,12 +79,6 @@ class AppPages {
     GetPage(
       name: _Paths.SIGNUP,
       page: () => const SignupView(),
-      binding: SignupBinding(),
-      transition: Transition.rightToLeftWithFade,
-    ),
-    GetPage(
-      name: _Paths.SIGNUP_ADMIN,
-      page: () => const SignupAdminView(),
       binding: SignupBinding(),
       transition: Transition.rightToLeftWithFade,
     ),
@@ -224,6 +220,19 @@ class AppPages {
         name: _Paths.CHAT,
         page: () => const ChatView(),
         binding: ChatListBinding(),
+        transitionDuration: const Duration(milliseconds: 500),
+        transition: Transition.rightToLeftWithFade),
+    GetPage(
+      name: _Paths.ADMIN_HOME,
+      page: () => const AdminHomeView(),
+      binding: AdminHomeBinding(),
+      transitionDuration: const Duration(milliseconds: 500),
+      transition: Transition.rightToLeftWithFade,
+    ),
+    GetPage(
+        name: _Paths.ADMIN_PROFILE,
+        page: () => const AdminProfileView(),
+        binding: AdminHomeBinding(),
         transitionDuration: const Duration(milliseconds: 500),
         transition: Transition.rightToLeftWithFade),
   ];

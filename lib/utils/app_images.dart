@@ -31,6 +31,7 @@ class AppImages {
   static const String beans_bg = 'assets/images/coffee_bg.png';
   static const String blue_bg = 'assets/images/blue_bottom_bg.png';
   static const String support = 'assets/images/support_image.png';
+  static const String admin_home_cr = 'assets/images/purple_circle_admin.png';
 }
 
 class AppIcons {
@@ -90,4 +91,15 @@ class AppIcons {
   static const String cal_next = 'assets/icons/calander_prev.png';
   static const String send_icon = 'assets/icons/send_icon.png';
   static const String file_icon = 'assets/icons/file_icon.png';
+  static const String forwars_icon = 'assets/icons/forward_icon.png';
+
+  // Admin Home Icons
+
+  static const String admin_attendence = 'assets/icons/admin_attendence.png';
+  static const String admin_event = 'assets/icons/admin_events.png';
+  static const String admin_exam = 'assets/icons/admin_exam.png';
+  static const String admin_homework = 'assets/icons/admin_homework.png';
+  static const String admin_result = 'assets/icons/admin_result.png';
+  static const String admin_solution = 'assets/icons/admin_solution.png';
+  static const String admin_account = 'assets/icons/admin.png';
 }

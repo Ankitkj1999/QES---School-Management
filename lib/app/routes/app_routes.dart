@@ -9,7 +9,6 @@ abstract class Routes {
   static const LOGIN = _Paths.LOGIN;
   static const WELCOME = _Paths.WELCOME;
   static const SIGNUP = _Paths.SIGNUP;
-  static const SIGNUP_ADMIN = _Paths.SIGNUP_ADMIN;
   static const PENDING = _Paths.PENDING;
   static const PROFILE = _Paths.PROFILE;
   static const CHANGEPASSWORD = _Paths.CHANGEPASSWORD;
@@ -31,6 +30,8 @@ abstract class Routes {
   static const ASK_DOUBT = _Paths.ASK_DOUBT;
   static const CHAT = _Paths.CHAT;
   static const CHAT_LIST = _Paths.CHAT_LIST;
+  static const ADMIN_HOME = _Paths.ADMIN_HOME;
+  static const ADMIN_PROFILE = _Paths.ADMIN_PROFILE;
 }
 
 abstract class _Paths {
@@ -41,7 +42,6 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const WELCOME = '/welcome';
   static const SIGNUP = '/signup';
-  static const SIGNUP_ADMIN = '/signup_admin';
   static const PENDING = '/pending';
   static const PROFILE = '/profile';
   static const CHANGEPASSWORD = '/changePassword';
@@ -63,4 +63,6 @@ abstract class _Paths {
   static const ASK_DOUBT = '/ask_doubt';
   static const CHAT_LIST = '/chat_list';
   static const CHAT = '/chat';
+  static const ADMIN_HOME = '/admin-home';
+  static const ADMIN_PROFILE = '/admin-profile';
 }

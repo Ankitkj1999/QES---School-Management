@@ -86,7 +86,17 @@ class SignupView extends GetView<SignupController> {
           ),
           // Form Input Fields
           // studentForm,
-          SignupForm().studentForm,
+          controller.loginController.selectedStudent.value
+              ? SignupForm().studentForm
+              : controller.loginController.selectedTeacher.value
+                  ? SignupForm().teacherForm
+                  : controller.loginController.selectedParent.value
+                      ? SignupForm().parentsForm
+                      : controller.loginController.selectedSchool.value
+                          ? SignupForm().adminForm
+                          : Container(
+                              child: Text('Nothing to show here!'),
+                            ),
           SizedBox(
             height: Get.width * 0.0733,
           ),
