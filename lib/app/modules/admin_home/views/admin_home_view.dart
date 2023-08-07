@@ -193,7 +193,13 @@ class ItemTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        index == 6 ? Get.toNamed('/admin-profile') : null;
+        index == 0
+            ? Get.toNamed('/admin-attendence-option')
+            : index == 2
+                ? Get.toNamed('/admin-result-term')
+                : index == 6
+                    ? Get.toNamed('/admin-profile')
+                    : null;
         // log('Print hello');
         // call;
       },

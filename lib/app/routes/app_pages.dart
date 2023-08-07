@@ -1,8 +1,14 @@
+import 'package:ces/app/modules/admin_home/views/admin_attendence_mark_view.dart';
+import 'package:ces/app/modules/admin_home/views/admin_attendence_option_view.dart';
+import 'package:ces/app/modules/admin_home/views/admin_attendence_select_view.dart';
 import 'package:ces/app/modules/admin_home/views/admin_profile_view.dart';
+import 'package:ces/app/modules/admin_home/views/result_choose_class_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/admin_home/bindings/admin_home_binding.dart';
 import '../modules/admin_home/views/admin_home_view.dart';
+import '../modules/admin_home/views/result_choose_term_view.dart';
+import '../modules/admin_home/views/support_view.dart';
 import '../modules/chat_list/bindings/chat_list_binding.dart';
 import '../modules/chat_list/views/chat_list_view.dart';
 import '../modules/chat_list/views/chat_view.dart';
@@ -235,5 +241,41 @@ class AppPages {
         binding: AdminHomeBinding(),
         transitionDuration: const Duration(milliseconds: 500),
         transition: Transition.rightToLeftWithFade),
+    GetPage(
+      name: _Paths.ADMIN_SUPPORT,
+      page: () => const AdminSupportView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
+    GetPage(
+      name: _Paths.ADMIN_ATTENDENCE_OPTION,
+      page: () => const AdminAttendenceOptionView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
+    GetPage(
+      name: _Paths.ADMIN_ATTENDENCE_SELECT,
+      page: () => AdminAttendenceSelectView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
+    GetPage(
+      name: _Paths.ADMIN_ATTENDENCE_MARK,
+      page: () => AdminAttendenceMarkView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
+    GetPage(
+      name: _Paths.ADMIN_RESULT_TERM,
+      page: () => ResultChooseTermView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
+    GetPage(
+      name: _Paths.ADMIN_RESULT_CLASS,
+      page: () => ResultChooseClassView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
   ];
 }

@@ -129,7 +129,7 @@ class AdminProfileView extends GetView<ProfileController> {
             ),
             onTap: () {
               // Update the state of the app.
-              Get.toNamed('/profile');
+              Get.toNamed('/admin-support');
             },
           ),
           SizedBox(

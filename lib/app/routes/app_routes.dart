@@ -32,6 +32,12 @@ abstract class Routes {
   static const CHAT_LIST = _Paths.CHAT_LIST;
   static const ADMIN_HOME = _Paths.ADMIN_HOME;
   static const ADMIN_PROFILE = _Paths.ADMIN_PROFILE;
+  static const ADMIN_SUPPORT = _Paths.ADMIN_SUPPORT;
+  static const ADMIN_ATTENDENCE_OPTION = _Paths.ADMIN_ATTENDENCE_OPTION;
+  static const ADMIN_ATTENDENCE_SELECT = _Paths.ADMIN_ATTENDENCE_SELECT;
+  static const ADMIN_ATTENDENCE_MARK = _Paths.ADMIN_ATTENDENCE_MARK;
+  static const ADMIN_RESULT_TERM = _Paths.ADMIN_RESULT_TERM;
+  static const ADMIN_RESULT_CLASS = _Paths.ADMIN_RESULT_CLASS;
 }
 
 abstract class _Paths {
@@ -65,4 +71,10 @@ abstract class _Paths {
   static const CHAT = '/chat';
   static const ADMIN_HOME = '/admin-home';
   static const ADMIN_PROFILE = '/admin-profile';
+  static const ADMIN_SUPPORT = '/admin-support';
+  static const ADMIN_ATTENDENCE_OPTION = '/admin-attendence-option';
+  static const ADMIN_ATTENDENCE_SELECT = '/admin-attendence-select';
+  static const ADMIN_ATTENDENCE_MARK = '/admin-attendence-mark';
+  static const ADMIN_RESULT_TERM = '/admin-result-term';
+  static const ADMIN_RESULT_CLASS = '/admin-result-class';
 }

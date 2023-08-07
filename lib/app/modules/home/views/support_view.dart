@@ -9,20 +9,21 @@ class SupportView extends GetView<SuperController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          body: SingleChildScrollView(
-        child: Container(
-          height: Get.height,
-          decoration: const BoxDecoration(
-            image: DecorationImage(
-              repeat: ImageRepeat.repeat,
-              image: AssetImage(AppImages.beans_bg),
+        body: SingleChildScrollView(
+          child: Container(
+            height: Get.height,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                repeat: ImageRepeat.repeat,
+                image: AssetImage(AppImages.beans_bg),
+              ),
+            ),
+            child: Column(
+              children: [topView, bodyView],
             ),
           ),
-          child: Column(
-            children: [topView, bodyView],
-          ),
         ),
-      )),
+      ),
     );
   }
 

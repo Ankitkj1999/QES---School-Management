@@ -30,6 +30,7 @@ class AppImages {
   static const String home_top_bg = 'assets/images/home_bg1.png';
   static const String beans_bg = 'assets/images/coffee_bg.png';
   static const String blue_bg = 'assets/images/blue_bottom_bg.png';
+  static const String full_blue_bg = 'assets/images/blue_bg.png';
   static const String support = 'assets/images/support_image.png';
   static const String admin_home_cr = 'assets/images/purple_circle_admin.png';
 }
@@ -92,6 +93,7 @@ class AppIcons {
   static const String send_icon = 'assets/icons/send_icon.png';
   static const String file_icon = 'assets/icons/file_icon.png';
   static const String forwars_icon = 'assets/icons/forward_icon.png';
+  static const String white_curve = 'assets/images/white_curve.png';
 
   // Admin Home Icons
 
@@ -106,4 +108,5 @@ class AppIcons {
   static const String admin_emg_cont = 'assets/icons/emergency_contact.png';
   static const String admin_setting = 'assets/icons/admin_settings.png';
   static const String admin_logout = 'assets/icons/admin_logout.png';
+  static const String admin_support = 'assets/icons/admin_support.png';
 }
