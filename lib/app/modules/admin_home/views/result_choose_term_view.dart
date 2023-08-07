@@ -99,6 +99,7 @@ class ResultChooseTermView<ResultChooseTermController> extends GetView {
           ],
         ),
       );
+
   Widget get bodyView => Expanded(
         child: Container(
           color: Colors.white,
@@ -109,98 +110,101 @@ class ResultChooseTermView<ResultChooseTermController> extends GetView {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               // first term
-              Container(
-                width: getMediaSize(311),
-                height: getMediaSize(166),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
-                      spreadRadius: 2,
-                      blurRadius: 4,
-                      offset: Offset(0, 4), // Controls the shadow offset
-                    ),
-                  ],
-                  borderRadius: BorderRadius.circular(10),
-                  // border: Border(
-                  //   top: BorderSide(color: Colors.red, width: 4),
-                  // ),
-                ),
-                child: Stack(
-                  children: [
-                    Column(
-                      children: [
-                        SizedBox(
-                          height: 20,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 20),
-                          child: SizedBox(
-                            width: getMediaSize(280),
-                            height: getMediaSize(19),
-                            child: Text(
-                              'First Terminal',
-                              style: TextStyle(
-                                color: Color(0xFF473F97),
-                                fontSize: 15,
-                                fontFamily: 'Open Sans',
-                                fontWeight: FontWeight.w400,
-                              ),
-                            ),
+              GestureDetector(
+                onTap: () => Get.toNamed('/admin-result-class'),
+                child: Container(
+                  width: getMediaSize(311),
+                  height: getMediaSize(166),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.2),
+                        spreadRadius: 2,
+                        blurRadius: 4,
+                        offset: Offset(0, 4), // Controls the shadow offset
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(10),
+                    // border: Border(
+                    //   top: BorderSide(color: Colors.red, width: 4),
+                    // ),
+                  ),
+                  child: Stack(
+                    children: [
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 20,
                           ),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Container(
-                            width: 278,
-                            height: 54.97,
-                            decoration: ShapeDecoration(
-                              color: Color(0xFFE9E9E9),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8)),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 15,
-                        ),
-                        Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: getMediaSize(20)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text(
-                                'PUBLISH',
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: SizedBox(
+                              width: getMediaSize(280),
+                              height: getMediaSize(19),
+                              child: Text(
+                                'First Terminal',
                                 style: TextStyle(
                                   color: Color(0xFF473F97),
                                   fontSize: 15,
                                   fontFamily: 'Open Sans',
                                   fontWeight: FontWeight.w400,
                                 ),
-                              )
-                            ],
+                              ),
+                            ),
                           ),
-                        )
-                      ],
-                    ),
-                    Positioned(
-                      left: 0,
-                      top: 0.65,
-                      child: Container(
-                        width: getMediaSize(311),
-                        height: getMediaSize(10),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Color(0xfffd366f),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Container(
+                              width: 278,
+                              height: 54.97,
+                              decoration: ShapeDecoration(
+                                color: Color(0xFFE9E9E9),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(8)),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 15,
+                          ),
+                          Padding(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: getMediaSize(20)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  'PUBLISH',
+                                  style: TextStyle(
+                                    color: Color(0xFF473F97),
+                                    fontSize: 15,
+                                    fontFamily: 'Open Sans',
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 0.65,
+                        child: Container(
+                          width: getMediaSize(311),
+                          height: getMediaSize(10),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0xfffd366f),
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
 

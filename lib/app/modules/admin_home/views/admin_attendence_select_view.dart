@@ -112,7 +112,9 @@ class AdminAttendenceSelectView<AdminAttendenceSelectController>
           color: Colors.white,
           width: Get.width,
           // height: Get.height,
+
           padding: EdgeInsets.all(getMediaSize(10)),
+
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

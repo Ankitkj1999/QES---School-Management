@@ -38,6 +38,7 @@ abstract class Routes {
   static const ADMIN_ATTENDENCE_MARK = _Paths.ADMIN_ATTENDENCE_MARK;
   static const ADMIN_RESULT_TERM = _Paths.ADMIN_RESULT_TERM;
   static const ADMIN_RESULT_CLASS = _Paths.ADMIN_RESULT_CLASS;
+  static const ADMIN_MARK_RESULT = _Paths.ADMIN_MARK_RESULT;
 }
 
 abstract class _Paths {
@@ -77,4 +78,5 @@ abstract class _Paths {
   static const ADMIN_ATTENDENCE_MARK = '/admin-attendence-mark';
   static const ADMIN_RESULT_TERM = '/admin-result-term';
   static const ADMIN_RESULT_CLASS = '/admin-result-class';
+  static const ADMIN_MARK_RESULT = '/admin-mark-result';
 }

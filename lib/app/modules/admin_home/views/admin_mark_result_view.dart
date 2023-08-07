@@ -1,21 +1,16 @@
-import 'dart:math';
-
+import 'package:ces/app/modules/admin_home/controllers/admin_mark_result_controller.dart';
 import 'package:ces/utils/app_images.dart';
 import 'package:ces/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/admin_attendence_mark_controller.dart';
-
-class AdminAttendenceMarkView extends GetView {
-  final AdminAttendenceMarkController controller =
-      Get.put(AdminAttendenceMarkController());
-
-  AdminAttendenceMarkView({Key? key}) : super(key: key);
+class AdminMarkResultView extends GetView {
+  final AdminMarkResultController controller =
+      Get.put(AdminMarkResultController());
+  AdminMarkResultView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // initialization of controller
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
@@ -40,18 +35,6 @@ class AdminAttendenceMarkView extends GetView {
                       image: AssetImage(
                         AppIcons.white_curve,
                       ),
-                    ),
-                  ),
-                ),
-                Scaffold(
-                  appBar: AppBar(
-                    title: const Text('AdminMarkResultView'),
-                    centerTitle: true,
-                  ),
-                  body: const Center(
-                    child: Text(
-                      'AdminMarkResultView is working',
-                      style: TextStyle(fontSize: 20),
                     ),
                   ),
                 ),
@@ -100,7 +83,7 @@ class AdminAttendenceMarkView extends GetView {
             Expanded(
               flex: 12,
               child: Text(
-                'Assignment',
+                'Add Marks',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -222,7 +205,7 @@ class AdminAttendenceMarkView extends GetView {
                       child: Row(
                         children: [
                           Text(
-                            'Present',
+                            'Marks',
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: getMediaSize(10),
@@ -230,18 +213,18 @@ class AdminAttendenceMarkView extends GetView {
                               fontWeight: FontWeight.w400,
                             ),
                           ),
-                          SizedBox(
-                            width: getMediaSize(20),
-                          ),
-                          Text(
-                            'Absent',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: getMediaSize(10),
-                              fontFamily: 'Open Sans',
-                              fontWeight: FontWeight.w400,
-                            ),
-                          )
+                          // SizedBox(
+                          //   width: getMediaSize(20),
+                          // ),
+                          // Text(
+                          //   'Absent',
+                          //   style: TextStyle(
+                          //     color: Colors.white,
+                          //     fontSize: getMediaSize(10),
+                          //     fontFamily: 'Open Sans',
+                          //     fontWeight: FontWeight.w400,
+                          //   ),
+                          // )
                         ],
                       ),
                     ),
@@ -302,29 +285,30 @@ class AdminAttendenceMarkView extends GetView {
                 ),
                 Expanded(
                   flex: 3,
-                  child: Row(
-                    children: [
-                      Checkbox(
-                        value: isPresent,
-                        onChanged: (value) {
-                          updatePresence(index, value!);
-                        },
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        activeColor: Colors.green, // Change checkbox color
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                        horizontal: getMediaSize(10),
+                        vertical: getMediaSize(5)),
+                    width: getMediaSize(37),
+                    height: getMediaSize(37),
+                    decoration: ShapeDecoration(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(width: 0.50, color: Color(0xFFBCBCBC)),
                       ),
-                      Checkbox(
-                        value: !isPresent,
-                        onChanged: (value) {
-                          updatePresence(index, !value!);
-                        },
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.symmetric(
+                            horizontal: getMediaSize(10),
+                            vertical: getMediaSize(5)),
+                        border: OutlineInputBorder(
+                          borderSide:
+                              BorderSide(width: 0.50, color: Color(0xFFBCBCBC)),
                         ),
-                        activeColor: Colors.red, // Change checkbox color
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ],

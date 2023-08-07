@@ -1,6 +1,7 @@
 import 'package:ces/app/modules/admin_home/views/admin_attendence_mark_view.dart';
 import 'package:ces/app/modules/admin_home/views/admin_attendence_option_view.dart';
 import 'package:ces/app/modules/admin_home/views/admin_attendence_select_view.dart';
+import 'package:ces/app/modules/admin_home/views/admin_mark_result_view.dart';
 import 'package:ces/app/modules/admin_home/views/admin_profile_view.dart';
 import 'package:ces/app/modules/admin_home/views/result_choose_class_view.dart';
 import 'package:get/get.dart';
@@ -48,7 +49,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.ADMIN_HOME;
+  static const INITIAL = Routes.ADMIN_MARK_RESULT;
 
   static final routes = [
     GetPage(
@@ -274,6 +275,12 @@ class AppPages {
     GetPage(
       name: _Paths.ADMIN_RESULT_CLASS,
       page: () => ResultChooseClassView(),
+      transition: Transition.rightToLeftWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
+    ),
+    GetPage(
+      name: _Paths.ADMIN_MARK_RESULT,
+      page: () => AdminMarkResultView(),
       transition: Transition.rightToLeftWithFade,
       transitionDuration: const Duration(milliseconds: 500),
     ),
